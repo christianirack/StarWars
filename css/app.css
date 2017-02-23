@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-size: 12px;
   background-color: black;
@@ -13,6 +14,7 @@ body {
   font-family: 'Helvetica';
 }
 
+/*----------  Posiciones iniciales de las estrellas, generar forma circular  ----------*/
 main {
   position: relative;
   width: 100%;
@@ -29,6 +31,20 @@ main #stars div {
   left: 100px;
 }
 
+/*----------  Contenedor de estrellas se mueve, moviendo a todas  ----------*/
+#stars {
+  width: 200%;
+  height: 200%;
+  -webkit-animation: move 60s linear infinite reverse;
+          animation: move 60s linear infinite reverse;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+/*----------  	Primer texto de entrada con una duración de 8 segs  ----------*/
 #introText {
   color: #0080ff;
   font-size: 2em;
@@ -41,6 +57,7 @@ main #stars div {
   opacity: 0;
 }
 
+/*----------  Contenedor del texto del final, con un angulo de punto de fuga  ----------*/
 #contText {
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
@@ -54,42 +71,33 @@ main #stars div {
   overflow: hidden;
 }
 
+/*----------  Solamente correr el texto de abajo hacia arriba usando la propiedad top  ----------*/
 #introTextEnd {
   color: #f1fb1b;
   font-size: 4em;
   text-align: left;
   position: absolute;
-  -webkit-animation: end 35s 11s linear forwards;
-          animation: end 35s 11s linear forwards;
+  -webkit-animation: end 80s 12s linear forwards;
+          animation: end 80s 12s linear forwards;
   top: 110%;
 }
 
-#stars {
-  width: 200%;
-  height: 200%;
-  -webkit-animation: move 60s linear infinite;
-          animation: move 60s linear infinite;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
+/*----------  En cuanto termina el texto aparece un fade de las estrellas  ----------*/
 #starsFade {
   -webkit-animation: introStars 5s 8s linear forwards;
           animation: introStars 5s 8s linear forwards;
   opacity: 0;
 }
 
+/*----------  Una imagen SVG que no se pixelea se muestra al doble de su tamaño y se implosiona a 0  ----------*/
 #logo {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
-  -webkit-animation: logo 7s 8s ease-out;
-          animation: logo 7s 8s ease-out;
+  -webkit-animation: logo 12s 8s ease-out;
+          animation: logo 12s 8s ease-out;
   opacity: 0;
 }
 
@@ -98,6 +106,7 @@ main #stars div {
   height: 100%;
 }
 
+/*----------  Clases con pequeñas variaciones de tiempo para hacer estrellas más organicas  ----------*/
 .anim1 {
   -webkit-animation: animateStar 4s linear infinite alternate;
           animation: animateStar 4s linear infinite alternate;
@@ -123,6 +132,7 @@ main #stars div {
           animation: animateStar 12s linear infinite alternate;
 }
 
+/*----------  Animaciones  ----------*/
 @-webkit-keyframes end {
   0% {
     top: 110%;
@@ -131,7 +141,6 @@ main #stars div {
     top: -300%;
   }
 }
-
 @keyframes end {
   0% {
     top: 110%;
@@ -237,8 +246,8 @@ main #stars div {
             transform: scale(0.2);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
@@ -248,8 +257,8 @@ main #stars div {
             transform: scale(0.2);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
 }
 
