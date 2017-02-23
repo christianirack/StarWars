@@ -54,7 +54,7 @@ main #stars div {
   font-weight: 100;
   display: inline-block;
   text-align: left;
-  margin-top: 15%;
+  margin-top: 20%;
   -webkit-animation: intro 8s .5s linear;
           animation: intro 8s .5s linear;
   opacity: 0;
@@ -109,7 +109,7 @@ main #stars div {
   height: 100%;
 }
 
-/*----------  Clases con pequeñas variaciones de tiempo para hacer estrellas más orgánicas  ----------*/
+/*----------  Clases con pequeñas variaciones de tiempo para hacer estrellas más organicas  ----------*/
 .anim1 {
   -webkit-animation: animateStar 4s linear infinite alternate;
           animation: animateStar 4s linear infinite alternate;
