@@ -1,15 +1,19 @@
+html,body{
+	width:100%;
+	height:100%;
+
+}
 body{
 	font-size: 12px;
 	background-color: black;
 	text-align: center;
-	width:100%;
-	height:100%;
 }
 *{
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
 	font-family: 'Helvetica';
+	overflow: hidden;
 	
 }
 /*----------  Posiciones iniciales de las estrellas, generar forma circular  ----------*/
@@ -18,7 +22,6 @@ main{
 	position:relative;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 	#stars div{
 		width:2px;
 		height:2px;

@@ -1,10 +1,13 @@
 @charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-size: 12px;
   background-color: black;
   text-align: center;
-  width: 100%;
-  height: 100%;
 }
 
 * {
@@ -12,6 +15,7 @@ body {
   padding: 0px;
   border: 0px;
   font-family: 'Helvetica';
+  overflow: hidden;
 }
 
 /*----------  Posiciones iniciales de las estrellas, generar forma circular  ----------*/
@@ -19,7 +23,6 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 main #stars div {
@@ -106,7 +109,7 @@ main #stars div {
   height: 100%;
 }
 
-/*----------  Clases con pequeñas variaciones de tiempo para hacer estrellas más organicas  ----------*/
+/*----------  Clases con pequeñas variaciones de tiempo para hacer estrellas más orgánicas  ----------*/
 .anim1 {
   -webkit-animation: animateStar 4s linear infinite alternate;
           animation: animateStar 4s linear infinite alternate;
