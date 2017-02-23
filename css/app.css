@@ -10,6 +10,7 @@ body {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  font-family: 'Helvetica';
 }
 
 main {
@@ -31,14 +32,36 @@ main #stars div {
 #introText {
   color: #0080ff;
   font-size: 2em;
-  font-family: 'Helvetica';
   font-weight: 100;
   display: inline-block;
   text-align: left;
-  margin-top: 20%;
+  margin-top: 15%;
   -webkit-animation: intro 8s .5s linear;
           animation: intro 8s .5s linear;
   opacity: 0;
+}
+
+#contText {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: perspective(200px) rotateX(25deg);
+          transform: perspective(200px) rotateX(25deg);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 200%;
+  overflow: hidden;
+}
+
+#introTextEnd {
+  color: #f1fb1b;
+  font-size: 4em;
+  text-align: left;
+  position: absolute;
+  -webkit-animation: end 35s 11s linear forwards;
+          animation: end 35s 11s linear forwards;
+  top: 110%;
 }
 
 #stars {
@@ -54,8 +77,8 @@ main #stars div {
 }
 
 #starsFade {
-  -webkit-animation: introStars 5s 6s linear forwards;
-          animation: introStars 5s 6s linear forwards;
+  -webkit-animation: introStars 5s 8s linear forwards;
+          animation: introStars 5s 8s linear forwards;
   opacity: 0;
 }
 
@@ -98,6 +121,24 @@ main #stars div {
 .anim5 {
   -webkit-animation: animateStar 12s linear infinite alternate;
           animation: animateStar 12s linear infinite alternate;
+}
+
+@-webkit-keyframes end {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -300%;
+  }
+}
+
+@keyframes end {
+  0% {
+    top: 110%;
+  }
+  100% {
+    top: -300%;
+  }
 }
 
 @-webkit-keyframes logo {
@@ -192,8 +233,8 @@ main #stars div {
 
 @-webkit-keyframes animateStar {
   from {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
   }
   to {
     -webkit-transform: scale(1);
@@ -203,8 +244,8 @@ main #stars div {
 
 @keyframes animateStar {
   from {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
   }
   to {
     -webkit-transform: scale(1);
@@ -218,8 +259,8 @@ main #stars div {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
 
@@ -229,7 +270,7 @@ main #stars div {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
