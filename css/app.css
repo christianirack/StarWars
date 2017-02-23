@@ -7,14 +7,96 @@ body {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  overflow: hidden;
 }
 
 main {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
-main #stars {
-  width: 40px;
-  height: 40px;
+main #stars div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  left: 100px;
+}
+
+#stars {
+  width: 500%;
+  height: 500%;
+  -webkit-animation: move 100s linear infinite alternate;
+          animation: move 100s linear infinite alternate;
+}
+
+.anim1 {
+  -webkit-animation: animateStar 4s linear infinite alternate;
+          animation: animateStar 4s linear infinite alternate;
+}
+
+.anim2 {
+  -webkit-animation: animateStar 8s linear infinite alternate;
+          animation: animateStar 8s linear infinite alternate;
+}
+
+.anim3 {
+  -webkit-animation: animateStar 15s linear infinite alternate;
+          animation: animateStar 15s linear infinite alternate;
+}
+
+.anim4 {
+  -webkit-animation: animateStar 20s linear infinite alternate;
+          animation: animateStar 20s linear infinite alternate;
+}
+
+.anim5 {
+  -webkit-animation: animateStar 12s linear infinite alternate;
+          animation: animateStar 12s linear infinite alternate;
+}
+
+@-webkit-keyframes animateStar {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes animateStar {
+  from {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
 }
