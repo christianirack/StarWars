@@ -1,2 +1,2 @@
 ###LINK###
-http://irack.mx/websites/starwars
+http://irack.mx/websites/StarWars/
