@@ -2,7 +2,10 @@
 html, body {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+>>>>>>> cbb02f6a004c20b3de69346e574b19c840b41c7e
 }
 
 body {
@@ -16,6 +19,7 @@ body {
   padding: 0px;
   border: 0px;
   font-family: 'Helvetica';
+  overflow: hidden;
 }
 
 /*----------  Posiciones iniciales de las estrellas, generar forma circular  ----------*/
@@ -23,7 +27,6 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 main #stars div {
@@ -55,7 +58,7 @@ main #stars div {
   font-weight: 100;
   display: inline-block;
   text-align: left;
-  margin-top: 15%;
+  margin-top: 20%;
   -webkit-animation: intro 8s .5s linear;
           animation: intro 8s .5s linear;
   opacity: 0;
